@@ -1,4 +1,3 @@
-
 //contact: piotr4@gmail.com
 //GPLv3
 import QtQuick 2.2
