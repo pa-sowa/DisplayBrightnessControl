@@ -202,6 +202,7 @@ Item {
             disconnectSource(sourceName)
         }
         function exec(cmdstr) {
+            console.log("exec: " + cmdstr)
             connectSource(cmdstr)
         }
         signal exited(int exitCode, int exitStatus, string stdout, string stderr)
