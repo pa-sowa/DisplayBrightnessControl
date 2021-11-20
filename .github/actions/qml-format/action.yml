@@ -6,6 +6,6 @@ branding:
 runs:
   using: 'docker'
   image: 'strixcode/qmlfmt'
-  #image: 'Dockerfile'
   args:
+    - -d
     - /github/workspace
