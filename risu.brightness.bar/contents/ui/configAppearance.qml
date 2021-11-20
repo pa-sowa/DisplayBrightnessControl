@@ -1,4 +1,4 @@
-﻿//contact: piotr4@gmail.com
+//contact: piotr4@gmail.com
 //GPLv3
 import QtQuick 2.5
 import QtQuick.Controls 1.4 as Controls1
@@ -13,7 +13,7 @@ Item {
         plasmoid.configuration.limitBrightnessMax = limitBrightnessMaxConfig.value
         plasmoid.configuration.limitBrightnessMin = limitBrightnessMinConfig.value
         plasmoid.configuration.limitDimness = limitDimnessConfig.value
-        plasmoid.configuration.slimIcon = slimIconConfig.checked;
+        plasmoid.configuration.slimIcon = slimIconConfig.checked
     }
 
     ColumnLayout {
@@ -23,23 +23,24 @@ Item {
         x: 5
 
         GroupBox {
-            title:  "Safe limits:"
+            title: "Safe limits:"
             font.underline: true
             Layout.fillWidth: true
 
             ColumnLayout {
 
-                RowLayout {    //limitBrightnessMax
+                RowLayout {
 
+                    //limitBrightnessMax
                     spacing: 20
                     Label {
                         text: "Limit maximal brigthness:"
                     }
-                    
+
                     Item {
-                         Layout.fillWidth: true
+                        Layout.fillWidth: true
                     }
-                    
+
                     Controls1.SpinBox {
                         id: limitBrightnessMaxConfig
                         value: plasmoid.configuration.limitBrightnessMax
@@ -50,18 +51,18 @@ Item {
                     }
                 }
 
-                RowLayout {  //limitBrightnessMin
+                RowLayout {
 
-
+                    //limitBrightnessMin
                     spacing: 20
                     Label {
                         text: "Limit minimal brigthness:"
                     }
-                    
+
                     Item {
-                         Layout.fillWidth: true
+                        Layout.fillWidth: true
                     }
-                    
+
                     Controls1.SpinBox {
                         id: limitBrightnessMinConfig
                         value: plasmoid.configuration.limitBrightnessMin
@@ -72,18 +73,19 @@ Item {
                     }
                 }
 
-                RowLayout {  //limitDimness
+                RowLayout {
 
+                    //limitDimness
                     spacing: 20
 
                     Label {
                         text: "Limit minimal dimness:"
                     }
-                    
+
                     Item {
-                         Layout.fillWidth: true
+                        Layout.fillWidth: true
                     }
-                    
+
                     Controls1.SpinBox {
                         id: limitDimnessConfig
                         value: plasmoid.configuration.limitDimness
@@ -93,17 +95,14 @@ Item {
                         implicitWidth: 80
                         decimals: 3
                     }
-
                 }
-
             }
         }
-        
+
         CheckBox {
             id: slimIconConfig
             text: "Slim icon (restart required)"
             checked: plasmoid.configuration.slimIcon
         }
-        
     }
 }
