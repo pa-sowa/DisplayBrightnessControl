@@ -4,7 +4,8 @@ branding:
   icon: 'align-left'
   color: 'green'
 runs:
-  using: 'strixcode/qmlfmt'
+  using: 'docker'
+  image: 'strixcode/qmlfmt'
   #image: 'Dockerfile'
   args:
     - /github/workspace
